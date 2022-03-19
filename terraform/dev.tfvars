@@ -1,0 +1,6 @@
+profile        = "be-dev"
+region         = "us-weast-1"
+instance       = "t2.nano"
+public_key     = "~/.ssh/demo/demoKeyPair.pub"
+private_key    = "~/.ssh/demo/demoKeyPair"
+ansible_user   = "ubuntu"

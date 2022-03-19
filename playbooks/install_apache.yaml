@@ -1,0 +1,21 @@
+# How to install Jenkins using Ansible Version 2018
+# https://awsbloglink.wordpress.com/2018/10/08/how-to-install-jenkins-using-ansible-version-2018/
+---
+- name: Install Jenkins
+  hosts: jenkins-ci
+  gather_facts: false
+  become: true
+  
+  tasks:
+  - name: Update APT package manager repositories cache
+    become: true
+    apt:
+      update_cache: yes
+  - name: Install Java using apache
+    become: yes
+    apt:
+      name: "{{ packages }}"
+      state: present
+    vars:
+      packages:
+          - apache
