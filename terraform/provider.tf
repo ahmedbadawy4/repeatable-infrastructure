@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   required_version = "=1.0.5"
   backend "s3" {
-    bucket = "terra-test-state-monese"
+    bucket = "terra-test-state-"
     key    = "demo-test-state"
     region = "us-east-1"
   }
